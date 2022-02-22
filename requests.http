@@ -1,0 +1,63 @@
+###
+POST http://localhost:3000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "User3",
+    "lastname": "userLastName3",
+    "account_bank": "3333",
+    "address": {
+        "city": "Manizales",
+        "code_zip": 333,
+        "lat": -33,
+        "length": 33
+    }
+}
+
+###
+GET http://localhost:3000/api/users HTTP/1.1
+
+###
+GET http://localhost:3000/api/users/6213bb1767412be83067afd4 HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/users/6213ba6c67412be83067afcf HTTP/1.1
+
+###
+PUT http://localhost:3000/api/users/6213c11a7196149880ae934b HTTP/1.1
+Content-Type: application/json
+
+{
+    "address": {
+        "city": "Medellin"
+    }
+}
+
+###
+POST http://localhost:3000/api/products HTTP/1.1
+Content-Type: application/json
+
+{
+    "product_name": "Bici",
+    "img": "./src/assets/images/bike.jpg",
+    "price": 200.000,
+    "cant": 5,
+    "state": true
+}
+
+###
+GET http://localhost:3000/api/products HTTP/1.1
+
+###
+GET http://localhost:3000/api/products/6213c36e9df32432737093f2 HTTP/1.1
+
+###
+DELETE http://localhost:3000/api/products/6213c36e9df32432737093f2 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/products/6213c67a6c5e3f6d21d8766e
+Content-Type: application/json
+
+{
+    "price": 100
+}
